@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="株式会社トリデアへのお問い合わせ。Toridea組織インフラに関するご相談はこちらから。">
+  <title>お問い合わせ | 株式会社トリデア</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* =====================
+       Contact Page
+    ===================== */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 96px;
+      align-items: start;
+    }
+
+    .contact-sidebar {
+      position: sticky;
+      top: calc(var(--header-h) + 32px);
+    }
+
+    .contact-info-block {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .contact-info-block:first-child { padding-top: 0; }
+    .contact-info-block:last-child  { border-bottom: none; }
+
+    .contact-info-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .contact-info-mail {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-primary);
+      display: block;
+      width: fit-content;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 1px;
+      transition: border-color 0.25s;
+      word-break: break-all;
+    }
+
+    .contact-info-mail:hover { border-color: var(--color-primary); }
+
+    .contact-info-note {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    .contact-svc-item {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .contact-svc-item:first-of-type { border-top: 1px solid var(--color-border); }
+    .contact-svc-item:last-of-type  { border-bottom: none; }
+
+    .contact-svc-num {
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--color-accent);
+      letter-spacing: 0.18em;
+      flex-shrink: 0;
+    }
+
+    .contact-svc-name {
+      font-size: 13px;
+      color: var(--color-text-mid);
+      line-height: 1.6;
+    }
+
+    .contact-svc-freq {
+      display: block;
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--color-text-light);
+      margin-top: 2px;
+    }
+
+    /* Form */
+    .form-consent {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-text-mid);
+      line-height: 1.8;
+      padding: 16px 20px;
+      border: 1px solid var(--color-border);
+      margin-bottom: 20px;
+    }
+
+    .form-consent a {
+      color: var(--color-primary);
+      border-bottom: 1px solid var(--color-primary);
+      font-weight: 500;
+    }
+
+    .form-submit-wrap { margin-top: 12px; }
+
+    .form-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 18px 32px;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-white);
+      background: var(--color-primary);
+      border: 1px solid var(--color-primary);
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .form-submit:hover {
+      background: transparent;
+      color: var(--color-primary);
+    }
+
+    .form-note {
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--color-text-light);
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .form-note a {
+      color: var(--color-primary);
+      border-bottom: 1px solid var(--color-border);
+      transition: border-color 0.25s;
+    }
+
+    .form-note a:hover { border-color: var(--color-primary); }
+
+    /* Success */
+    .form-success {
+      display: none;
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    .form-success__icon {
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--color-primary);
+      margin: 0 auto 24px;
+    }
+
+    .form-success__title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+    }
+
+    .form-success__text {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--color-text-light);
+      line-height: 2.0;
+    }
+
+    @media (max-width: 960px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      .contact-sidebar {
+        position: static;
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-name">株式会社トリデア</span>
+        <span class="header__logo-en">TORIDEA Inc.</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">TOP</a></li>
+          <li><a href="about.html" class="nav__link">会社概要</a></li>
+          <li><a href="service.html" class="nav__link">事業内容</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="nav__cta">お問い合わせ</a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">TOP</a></li>
+      <li><a href="about.html" class="mobile-nav__link">会社概要</a></li>
+      <li><a href="service.html" class="mobile-nav__link">事業内容</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-nav__cta">お問い合わせ</a>
+  </div>
+
+  <!-- Page Hero -->
+  <div class="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__eyebrow">
+          <span class="page-hero__label">Contact</span>
+          <span class="page-hero__line"></span>
+        </div>
+        <h1 class="page-hero__title">お問い合わせ</h1>
+        <p class="page-hero__lead">
+          組織の課題や現状のお悩みをお聞かせください。<br>
+          担当者より2営業日以内にご連絡いたします。
+        </p>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Form -->
+          <div>
+            <div class="eyebrow fade-in">
+              <span class="eyebrow__text">Inquiry Form</span>
+              <span class="eyebrow__line"></span>
+            </div>
+            <h2 class="heading-serif fade-in" style="margin-bottom:40px;">お問い合わせフォーム</h2>
+
+            <form id="contactForm" novalidate class="fade-in"
+                  action="https://formspree.io/f/mykogobg" method="POST">
+              <input type="hidden" name="_next" value="/thanks.html">
+              <input type="hidden" name="_subject" value="【トリデア公式サイト】お問い合わせがありました">
+              <div class="form-group">
+                <label class="form-label" for="name">
+                  Name <span class="form-label__ja">お名前</span>
+                  <span class="required">必須</span>
+                </label>
+                <input type="text" id="name" name="name" class="form-input"
+                       placeholder="山田 太郎" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="company">
+                  Company <span class="form-label__ja">会社名</span>
+                  <span class="required">必須</span>
+                </label>
+                <input type="text" id="company" name="company" class="form-input"
+                       placeholder="株式会社〇〇" required autocomplete="organization">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">
+                  Email <span class="form-label__ja">メールアドレス</span>
+                  <span class="required">必須</span>
+                </label>
+                <input type="email" id="email" name="email" class="form-input"
+                       placeholder="example@company.co.jp" required autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="inquiry-type">
+                  Category <span class="form-label__ja">お問い合わせ種別</span>
+                  <span class="required">必須</span>
+                </label>
+                <select id="inquiry-type" name="inquiry_type" class="form-select" required>
+                  <option value="">選択してください</option>
+                  <option value="service">サービスについて</option>
+                  <option value="recruit">採用について</option>
+                  <option value="other">その他お問い合わせ</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">
+                  Message <span class="form-label__ja">お問い合わせ内容</span>
+                  <span class="required">必須</span>
+                </label>
+                <textarea id="message" name="message" class="form-textarea"
+                          placeholder="組織の課題や現状、ご質問などをご自由にお書きください。" required></textarea>
+              </div>
+
+              <div class="form-submit-wrap">
+                <p class="form-consent">
+                  <a href="privacy.html" target="_blank">プライバシーポリシー</a>に同意の上、送信してください。
+                </p>
+                <button type="submit" class="form-submit">
+                  送信する <span>→</span>
+                </button>
+                <p class="form-note">通常2営業日以内にご返信いたします。</p>
+              </div>
+            </form>
+
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="contact-sidebar fade-in">
+            <div class="contact-info-block">
+              <p class="contact-info-label">Direct Mail</p>
+              <a href="mailto:info@toridea.co.jp" class="contact-info-mail">
+                info@toridea.co.jp
+              </a>
+              <p class="contact-info-note">
+                フォームからの送信が難しい場合は、直接メールにてご連絡ください。
+              </p>
+            </div>
+
+            <div class="contact-info-block">
+              <p class="contact-info-label">Access</p>
+              <p style="font-size:14px; font-weight:300; color:var(--color-text-mid); line-height:2.0;">
+                〒157-0072<br>
+                東京都世田谷区祖師谷5-32-30
+              </p>
+            </div>
+
+            <div class="contact-info-block">
+              <p class="contact-info-label">Our Services</p>
+              <div class="contact-svc-item">
+                <span class="contact-svc-num">01</span>
+                <p class="contact-svc-name">
+                  組織コンディションの把握
+                  <span class="contact-svc-freq">四半期 / 1on1 MTG</span>
+                </p>
+              </div>
+              <div class="contact-svc-item">
+                <span class="contact-svc-num">02</span>
+                <p class="contact-svc-name">
+                  求心力の醸成
+                  <span class="contact-svc-freq">年次 / 1Dayオフサイト合宿</span>
+                </p>
+              </div>
+              <div class="contact-svc-item">
+                <span class="contact-svc-num">03</span>
+                <p class="contact-svc-name">
+                  実行強度の担保
+                  <span class="contact-svc-freq">月次 / ビルドアップMTG</span>
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">株式会社トリデア</p>
+          <p class="footer__brand-en">TORIDEA Inc.</p>
+          <p class="footer__mission">
+            「思いやり」で幸せが広がる社会をつくる。
+          </p>
+        </div>
+        <div>
+          <p class="footer__col-label">Navigation</p>
+          <ul class="footer__nav-list">
+            <li><a href="index.html" class="footer__nav-link">TOP</a></li>
+            <li><a href="about.html" class="footer__nav-link">会社概要</a></li>
+            <li><a href="service.html" class="footer__nav-link">事業内容</a></li>
+            <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+            <li><a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Contact</p>
+          <p class="footer__address">
+            〒157-0072<br>
+            東京都世田谷区祖師谷5-32-30<br><br>
+            <a href="mailto:info@toridea.co.jp" style="color:var(--color-accent);">info@toridea.co.jp</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 株式会社トリデア. All Rights Reserved.</p>
+        <p class="footer__tagline">Toridea組織インフラ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-open');
+      mobileNav.classList.toggle('is-open');
+    });
+
+    document.querySelectorAll('.mobile-nav__link, .mobile-nav__cta').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-open');
+        mobileNav.classList.remove('is-open');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Form — クライアントバリデーション後に Formspree へ送信
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', (e) => {
+      const name    = document.getElementById('name').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const inquiry = document.getElementById('inquiry-type').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !company || !email || !inquiry || !message) {
+        e.preventDefault();
+        alert('必須項目をすべてご入力ください。');
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        e.preventDefault();
+        alert('正しいメールアドレスをご入力ください。');
+        return;
+      }
+      // バリデーション通過 → Formspree へ自然に送信
+    });
+  </script>
+</body>
+</html>

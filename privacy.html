@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="株式会社トリデアのプライバシーポリシー。個人情報の取り扱いについて。">
+  <title>プライバシーポリシー | 株式会社トリデア</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* =====================
+       Privacy Page
+    ===================== */
+    .privacy-body {
+      max-width: 760px;
+    }
+
+    .privacy-section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .privacy-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .privacy-section__num {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .privacy-section__title {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .privacy-section__text {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--color-text-mid);
+      line-height: 2.1;
+    }
+
+    .privacy-section__text + .privacy-section__text {
+      margin-top: 16px;
+    }
+
+    .privacy-list {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .privacy-list__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--color-text-mid);
+      line-height: 1.8;
+    }
+
+    .privacy-list__item::before {
+      content: '';
+      width: 1px;
+      height: 14px;
+      background: var(--color-accent);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .privacy-meta {
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .privacy-meta__item {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-text-light);
+    }
+
+    .privacy-meta__label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .privacy-contact-block {
+      margin-top: 48px;
+      padding: 40px;
+      background: var(--color-bg);
+    }
+
+    .privacy-contact-block__label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .privacy-contact-block__text {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--color-text-mid);
+      line-height: 2.1;
+    }
+
+    .privacy-contact-block__mail {
+      color: var(--color-primary);
+      font-weight: 500;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 1px;
+      transition: border-color 0.25s;
+    }
+
+    .privacy-contact-block__mail:hover {
+      border-color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-name">株式会社トリデア</span>
+        <span class="header__logo-en">TORIDEA Inc.</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">TOP</a></li>
+          <li><a href="about.html" class="nav__link">会社概要</a></li>
+          <li><a href="service.html" class="nav__link">事業内容</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="nav__cta">お問い合わせ</a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">TOP</a></li>
+      <li><a href="about.html" class="mobile-nav__link">会社概要</a></li>
+      <li><a href="service.html" class="mobile-nav__link">事業内容</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-nav__cta">お問い合わせ</a>
+  </div>
+
+  <!-- Page Hero -->
+  <div class="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__eyebrow">
+          <span class="page-hero__label">Legal</span>
+          <span class="page-hero__line"></span>
+        </div>
+        <h1 class="page-hero__title">プライバシーポリシー</h1>
+        <p class="page-hero__lead">
+          株式会社トリデアは、お客様の個人情報の保護を重要な責務と認識し、<br>
+          適切な取り扱いに努めます。
+        </p>
+      </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="section">
+      <div class="container">
+        <div class="privacy-body fade-in">
+
+          <p class="privacy-section__text" style="margin-bottom:48px;">
+            株式会社トリデア（以下「当社」）は、本ウェブサイトをご利用いただく皆様（以下「ユーザー」）の個人情報の保護を最重要事項のひとつと認識し、以下のプライバシーポリシーに従って個人情報を適切に取り扱います。
+          </p>
+
+          <!-- 1 -->
+          <div class="privacy-section">
+            <p class="privacy-section__num">Article 01</p>
+            <h2 class="privacy-section__title">個人情報の取得について</h2>
+            <p class="privacy-section__text">
+              当社は、サービスのご提供・ご連絡・採用活動等に必要な範囲で、以下の方法により個人情報を取得します。
+            </p>
+            <div class="privacy-list">
+              <p class="privacy-list__item">お問い合わせフォームへの入力</p>
+              <p class="privacy-list__item">メール・電話等による直接のご連絡</p>
+              <p class="privacy-list__item">名刺・書面等のご提出</p>
+              <p class="privacy-list__item">本ウェブサイトへのアクセスに伴う自動取得（Cookieなど）</p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="privacy-section">
+            <p class="privacy-section__num">Article 02</p>
+            <h2 class="privacy-section__title">個人情報の利用目的</h2>
+            <p class="privacy-section__text">
+              取得した個人情報は、以下の目的のために利用します。
+            </p>
+            <div class="privacy-list">
+              <p class="privacy-list__item">お問い合わせ・ご相談への対応</p>
+              <p class="privacy-list__item">サービスのご提供および契約の履行</p>
+              <p class="privacy-list__item">採用選考のご連絡・情報提供</p>
+              <p class="privacy-list__item">サービスの改善・新サービスの開発</p>
+              <p class="privacy-list__item">当社からのご案内・情報発信（ご同意いただいた場合）</p>
+              <p class="privacy-list__item">法令に基づく対応</p>
+            </div>
+            <p class="privacy-section__text" style="margin-top:16px;">
+              上記以外の目的で個人情報を利用する場合は、あらかじめご本人の同意を得た上で行います。
+            </p>
+          </div>
+
+          <!-- 3 -->
+          <div class="privacy-section">
+            <p class="privacy-section__num">Article 03</p>
+            <h2 class="privacy-section__title">個人情報の第三者提供</h2>
+            <p class="privacy-section__text">
+              当社は、以下のいずれかに該当する場合を除き、ご本人の同意なく個人情報を第三者に提供しません。
+            </p>
+            <div class="privacy-list">
+              <p class="privacy-list__item">法令に基づき開示が求められる場合</p>
+              <p class="privacy-list__item">人の生命・身体・財産の保護のために必要であり、本人の同意を得ることが困難な場合</p>
+              <p class="privacy-list__item">業務委託に伴い、委託先へ必要最小限の情報を提供する場合（委託先は当社と同等の個人情報保護措置を講じます）</p>
+              <p class="privacy-list__item">その他、法令で認められる場合</p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="privacy-section">
+            <p class="privacy-section__num">Article 04</p>
+            <h2 class="privacy-section__title">個人情報の開示・訂正・削除</h2>
+            <p class="privacy-section__text">
+              ご本人から個人情報の開示・訂正・削除・利用停止のご請求があった場合、ご本人であることを確認の上、合理的な期間内に対応します。ただし、法令上の義務がある場合や業務上の支障がある場合はこの限りではありません。
+            </p>
+            <p class="privacy-section__text">
+              ご請求は、下記のお問い合わせ窓口までご連絡ください。
+            </p>
+          </div>
+
+          <!-- 5 -->
+          <div class="privacy-section">
+            <p class="privacy-section__num">Article 05</p>
+            <h2 class="privacy-section__title">セキュリティ対策</h2>
+            <p class="privacy-section__text">
+              当社は、個人情報の漏洩・滅失・毀損等を防止するため、適切な安全管理措置を実施します。個人情報へのアクセスは、業務上必要な担当者に限定し、適切な管理のもとで取り扱います。
+            </p>
+            <p class="privacy-section__text">
+              なお、本ウェブサイトのお問い合わせフォームは SSL/TLS 暗号化通信を使用し、送受信データの保護に努めています。
+            </p>
+          </div>
+
+          <!-- 6 -->
+          <div class="privacy-section">
+            <p class="privacy-section__num">Article 06</p>
+            <h2 class="privacy-section__title">Cookieの使用について</h2>
+            <p class="privacy-section__text">
+              本ウェブサイトでは、ユーザー体験の向上およびアクセス解析を目的として Cookie を使用する場合があります。Cookie は、ブラウザの設定により無効化することができますが、その場合、本ウェブサイトの一部機能がご利用いただけなくなる場合があります。
+            </p>
+            <p class="privacy-section__text">
+              Cookie によって収集される情報は、個人を特定するものではありません。アクセス解析に取得したデータは、サービス改善の目的にのみ使用します。
+            </p>
+          </div>
+
+          <!-- 7 -->
+          <div class="privacy-section">
+            <p class="privacy-section__num">Article 07</p>
+            <h2 class="privacy-section__title">プライバシーポリシーの変更</h2>
+            <p class="privacy-section__text">
+              当社は、法令の変更や業務内容の変化等に応じて、本ポリシーを予告なく改定することがあります。重要な変更がある場合は、本ウェブサイト上でお知らせします。改定後のポリシーは、本ページに掲載した時点より効力を生じるものとします。
+            </p>
+          </div>
+
+          <!-- Contact -->
+          <div class="privacy-contact-block fade-in">
+            <p class="privacy-contact-block__label">お問い合わせ窓口</p>
+            <p class="privacy-contact-block__text">
+              個人情報の取り扱いに関するご質問・ご請求は、下記窓口までお問い合わせください。<br><br>
+              株式会社トリデア　個人情報取扱担当<br>
+              〒157-0072　東京都世田谷区祖師谷5-32-30<br>
+              E-mail：<a href="mailto:info@toridea.co.jp" class="privacy-contact-block__mail">info@toridea.co.jp</a>
+            </p>
+          </div>
+
+          <!-- Meta -->
+          <div class="privacy-meta fade-in">
+            <div class="privacy-meta__item">
+              <p class="privacy-meta__label">Established</p>
+              <p>2026年4月3日 制定</p>
+            </div>
+            <div class="privacy-meta__item">
+              <p class="privacy-meta__label">Company</p>
+              <p>株式会社トリデア</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">株式会社トリデア</p>
+          <p class="footer__brand-en">TORIDEA Inc.</p>
+          <p class="footer__mission">
+            「思いやり」で幸せが広がる社会をつくる。
+          </p>
+        </div>
+        <div>
+          <p class="footer__col-label">Navigation</p>
+          <ul class="footer__nav-list">
+            <li><a href="index.html" class="footer__nav-link">TOP</a></li>
+            <li><a href="about.html" class="footer__nav-link">会社概要</a></li>
+            <li><a href="service.html" class="footer__nav-link">事業内容</a></li>
+            <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+            <li><a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Contact</p>
+          <p class="footer__address">
+            〒157-0072<br>
+            東京都世田谷区祖師谷5-32-30<br><br>
+            <a href="mailto:info@toridea.co.jp" style="color:var(--color-accent);">info@toridea.co.jp</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 株式会社トリデア. All Rights Reserved.</p>
+        <p class="footer__tagline">Toridea組織インフラ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-open');
+      mobileNav.classList.toggle('is-open');
+    });
+
+    document.querySelectorAll('.mobile-nav__link, .mobile-nav__cta').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-open');
+        mobileNav.classList.remove('is-open');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

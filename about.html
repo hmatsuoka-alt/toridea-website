@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="株式会社トリデアの会社概要。設立2026年4月3日、東京都世田谷区。代表取締役 松岡 英寿。">
+  <title>会社概要 | 株式会社トリデア</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* =====================
+       About Page
+    ===================== */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 96px;
+      align-items: start;
+    }
+
+    .about-sidebar {
+      position: sticky;
+      top: calc(var(--header-h) + 32px);
+    }
+
+    .sidebar-card {
+      background: var(--color-primary);
+      padding: 48px 40px;
+      color: var(--color-white);
+    }
+
+    .sidebar-card__label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-card__mission {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .sidebar-card__divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 28px;
+    }
+
+    .sidebar-card__svc-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-card__svc-name {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-card__svc-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.9;
+      font-weight: 300;
+    }
+
+    .sidebar-card__cta {
+      display: block;
+      margin-top: 24px;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,0.2);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transition: background 0.25s, border-color 0.25s;
+    }
+
+    .sidebar-card__cta + .sidebar-card__cta { margin-top: 10px; }
+
+    .sidebar-card__cta:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.35);
+    }
+
+    @media (max-width: 960px) {
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      .about-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-name">株式会社トリデア</span>
+        <span class="header__logo-en">TORIDEA Inc.</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">TOP</a></li>
+          <li><a href="about.html" class="nav__link active">会社概要</a></li>
+          <li><a href="service.html" class="nav__link">事業内容</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="nav__cta">お問い合わせ</a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">TOP</a></li>
+      <li><a href="about.html" class="mobile-nav__link">会社概要</a></li>
+      <li><a href="service.html" class="mobile-nav__link">事業内容</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-nav__cta">お問い合わせ</a>
+  </div>
+
+  <!-- Page Hero -->
+  <div class="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__eyebrow">
+          <span class="page-hero__label">About</span>
+          <span class="page-hero__line"></span>
+        </div>
+        <h1 class="page-hero__title">会社概要</h1>
+        <p class="page-hero__lead">
+          株式会社トリデアは、組織の求心力と実行強度を担保することで、<br>クライアント企業の持続的な成長を支援します。
+        </p>
+      </div>
+    </section>
+
+    <!-- Company Info -->
+    <section class="section">
+      <div class="container">
+        <div class="about-layout">
+
+          <!-- Main -->
+          <div>
+            <div class="eyebrow fade-in">
+              <span class="eyebrow__text">Company Info</span>
+              <span class="eyebrow__line"></span>
+            </div>
+            <h2 class="heading-serif fade-in" style="margin-bottom:48px;">会社情報</h2>
+
+            <dl class="info-dl fade-in">
+              <div class="info-dl__item">
+                <dt class="info-dl__term">Company</dt>
+                <dd class="info-dl__def">株式会社トリデア</dd>
+              </div>
+              <div class="info-dl__item">
+                <dt class="info-dl__term">English Name</dt>
+                <dd class="info-dl__def">TORIDEA Inc.</dd>
+              </div>
+              <div class="info-dl__item">
+                <dt class="info-dl__term">Founded</dt>
+                <dd class="info-dl__def">2026年4月3日</dd>
+              </div>
+              <div class="info-dl__item">
+                <dt class="info-dl__term">Address</dt>
+                <dd class="info-dl__def">
+                  〒157-0072<br>
+                  東京都世田谷区祖師谷5-32-30
+                </dd>
+              </div>
+              <div class="info-dl__item">
+                <dt class="info-dl__term">Officers</dt>
+                <dd class="info-dl__def">
+                  代表取締役・共同創業者　松岡 英寿<br>
+                  取締役・共同創業者　鵜飼 颯大
+                </dd>
+              </div>
+              <div class="info-dl__item">
+                <dt class="info-dl__term">Business</dt>
+                <dd class="info-dl__def">組織開発支援・人材育成支援</dd>
+              </div>
+              <div class="info-dl__item">
+                <dt class="info-dl__term">Mission</dt>
+                <dd class="info-dl__def">「思いやり」で幸せが広がる社会をつくる</dd>
+              </div>
+              <div class="info-dl__item">
+                <dt class="info-dl__term">Email</dt>
+                <dd class="info-dl__def">
+                  <a href="mailto:info@toridea.co.jp" class="text-link"
+                     style="font-size:15px; font-weight:300; text-transform:none; letter-spacing:0.02em;">
+                    info@toridea.co.jp
+                  </a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="about-sidebar">
+            <div class="sidebar-card fade-in">
+              <p class="sidebar-card__label">Our Mission</p>
+              <p class="sidebar-card__mission">
+                「思いやり」で幸せが広がる社会をつくる
+              </p>
+              <hr class="sidebar-card__divider">
+              <p class="sidebar-card__svc-label">Service</p>
+              <p class="sidebar-card__svc-name">Toridea組織インフラ</p>
+              <p class="sidebar-card__svc-text">
+                組織の求心力と実行強度を担保し、組織の砦として事業成長を支える伴走支援サービスです。
+              </p>
+              <a href="service.html" class="sidebar-card__cta">サービス詳細を見る →</a>
+              <a href="contact.html" class="sidebar-card__cta">お問い合わせはこちら →</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--gray">
+      <div class="container" style="text-align:center;">
+        <div class="eyebrow fade-in" style="justify-content:center;">
+          <span class="eyebrow__text">Contact</span>
+          <span class="eyebrow__line"></span>
+        </div>
+        <h2 class="heading-serif fade-in" style="margin-bottom:16px;">お気軽にご相談ください</h2>
+        <p class="lead fade-in" style="margin:0 auto 40px; text-align:center;">
+          組織の課題や現状のお悩みをお聞かせください。<br>
+          サービス内容とともに、具体的なご提案をいたします。
+        </p>
+        <a href="contact.html" class="btn btn--primary fade-in">
+          お問い合わせフォームへ <span class="btn__arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">株式会社トリデア</p>
+          <p class="footer__brand-en">TORIDEA Inc.</p>
+          <p class="footer__mission">
+            「思いやり」で幸せが広がる社会をつくる。
+          </p>
+        </div>
+        <div>
+          <p class="footer__col-label">Navigation</p>
+          <ul class="footer__nav-list">
+            <li><a href="index.html" class="footer__nav-link">TOP</a></li>
+            <li><a href="about.html" class="footer__nav-link">会社概要</a></li>
+            <li><a href="service.html" class="footer__nav-link">事業内容</a></li>
+            <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+            <li><a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Contact</p>
+          <p class="footer__address">
+            〒157-0072<br>
+            東京都世田谷区祖師谷5-32-30<br><br>
+            <a href="mailto:info@toridea.co.jp" style="color:var(--color-accent);">info@toridea.co.jp</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 株式会社トリデア. All Rights Reserved.</p>
+        <p class="footer__tagline">Toridea組織インフラ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-open');
+      mobileNav.classList.toggle('is-open');
+    });
+
+    document.querySelectorAll('.mobile-nav__link, .mobile-nav__cta').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-open');
+        mobileNav.classList.remove('is-open');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

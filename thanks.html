@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>送信完了 | 株式会社トリデア</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* =====================
+       Thanks Page
+    ===================== */
+    .thanks-wrap {
+      min-height: calc(100vh - var(--header-h));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 0;
+    }
+
+    .thanks-inner {
+      text-align: center;
+      max-width: 560px;
+    }
+
+    .thanks-icon {
+      width: 64px;
+      height: 64px;
+      border: 1px solid var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--color-primary);
+      margin: 0 auto 40px;
+    }
+
+    .thanks-eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .thanks-title {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 500;
+      color: var(--color-primary);
+      line-height: 1.55;
+      margin-bottom: 28px;
+    }
+
+    .thanks-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--color-accent);
+      margin: 0 auto 28px;
+    }
+
+    .thanks-text {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--color-text-mid);
+      line-height: 2.2;
+      margin-bottom: 48px;
+    }
+
+    .thanks-note {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-text-light);
+      margin-top: 20px;
+      line-height: 1.9;
+    }
+
+    .thanks-note a {
+      color: var(--color-primary);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 1px;
+      transition: border-color 0.25s;
+    }
+
+    .thanks-note a:hover {
+      border-color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-name">株式会社トリデア</span>
+        <span class="header__logo-en">TORIDEA Inc.</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">TOP</a></li>
+          <li><a href="about.html" class="nav__link">会社概要</a></li>
+          <li><a href="service.html" class="nav__link">事業内容</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="nav__cta">お問い合わせ</a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">TOP</a></li>
+      <li><a href="about.html" class="mobile-nav__link">会社概要</a></li>
+      <li><a href="service.html" class="mobile-nav__link">事業内容</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-nav__cta">お問い合わせ</a>
+  </div>
+
+  <!-- Thanks Content -->
+  <div class="main-content">
+    <div class="thanks-wrap">
+      <div class="thanks-inner">
+        <div class="thanks-icon">✓</div>
+        <p class="thanks-eyebrow">Thank you</p>
+        <h1 class="thanks-title">
+          お問い合わせ<br>ありがとうございました
+        </h1>
+        <div class="thanks-rule"></div>
+        <p class="thanks-text">
+          内容を確認の上、<br>
+          3営業日以内に担当者よりご連絡いたします。
+        </p>
+        <a href="index.html" class="btn btn--primary">
+          TOPへ戻る <span class="btn__arrow">→</span>
+        </a>
+        <p class="thanks-note">
+          お急ぎの場合は直接メールにてご連絡ください。<br>
+          <a href="mailto:info@toridea.co.jp">info@toridea.co.jp</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">株式会社トリデア</p>
+          <p class="footer__brand-en">TORIDEA Inc.</p>
+          <p class="footer__mission">
+            「思いやり」で幸せが広がる社会をつくる。
+          </p>
+        </div>
+        <div>
+          <p class="footer__col-label">Navigation</p>
+          <ul class="footer__nav-list">
+            <li><a href="index.html" class="footer__nav-link">TOP</a></li>
+            <li><a href="about.html" class="footer__nav-link">会社概要</a></li>
+            <li><a href="service.html" class="footer__nav-link">事業内容</a></li>
+            <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
+            <li><a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Contact</p>
+          <p class="footer__address">
+            〒157-0072<br>
+            東京都世田谷区祖師谷5-32-30<br><br>
+            <a href="mailto:info@toridea.co.jp" style="color:var(--color-accent);">info@toridea.co.jp</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 株式会社トリデア. All Rights Reserved.</p>
+        <p class="footer__tagline">Toridea組織インフラ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-open');
+      mobileNav.classList.toggle('is-open');
+    });
+
+    document.querySelectorAll('.mobile-nav__link, .mobile-nav__cta').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-open');
+        mobileNav.classList.remove('is-open');
+      });
+    });
+  </script>
+</body>
+</html>
