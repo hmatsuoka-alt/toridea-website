@@ -1,384 +1,437 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="株式会社トリデアのプライバシーポリシー。個人情報の取り扱いについて。">
-  <meta name="google-site-verification" content="NkUBBzLh7_Rmqn_y_YiJ9PpteuSCEMoeHBGua6x08ZY" />
-  <title>プライバシーポリシー | 株式会社トリデア</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* =====================
-       Privacy Page
-    ===================== */
-    .privacy-body {
-      max-width: 760px;
-    }
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="NkUBBzLh7_Rmqn_y_YiJ9PpteuSCEMoeHBGua6x08ZY" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社トリデアのプライバシーポリシー。個人情報の取り扱いについて。">
+<title>プライバシーポリシー｜株式会社トリデア</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
 
-    .privacy-section {
-      padding: 48px 0;
-      border-bottom: 1px solid var(--color-border);
-    }
+:root{
+  --navy:#122A47; --navy2:#0B1B30; --ink:#16202B; --slate:#5A6A79; --faint:#8A97A3;
+  --line:#E3E8ED; --line2:#CED6DD; --bg:#FFFFFF; --bg2:#F5F7F9; --panel:#0E2340;
+  --accent:#1C7C5A; --accent-l:#2E9B74;
+  --g:'Noto Sans JP',sans-serif; --serif:'Noto Serif JP',serif; --lat:'Manrope',sans-serif;
+  --e:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--g);color:var(--ink);background:var(--bg);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:rgba(28,124,90,.16)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px;position:relative}
+@media(max-width:640px){.wrap{padding:0 22px}}
+.lat{font-family:var(--lat);font-weight:600;letter-spacing:.18em;text-transform:uppercase}
 
-    .privacy-section:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
+/* header */
+.hd{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:.3s}
+.hd__in{max-width:1180px;margin:0 auto;padding:0 40px;height:74px;display:flex;align-items:center;justify-content:space-between}
+.hd.small .hd__in{height:62px}
+.lg{display:flex;align-items:baseline;gap:12px}
+.lg b{font-family:var(--serif);font-weight:700;font-size:21px;letter-spacing:.06em;color:var(--navy)}
+.lg span{font-family:var(--lat);font-size:10px;letter-spacing:.28em;color:var(--accent)}
+.nav{display:flex;align-items:center;gap:34px}
+.nav a{font-size:13px;font-weight:600;color:var(--slate);position:relative;padding:4px 0;letter-spacing:.04em}
+.nav a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--accent);transition:width .3s var(--e)}
+.nav a:hover{color:var(--navy)}.nav a:hover::after{width:100%}
+.nav a.cta{border:1px solid var(--navy);color:var(--navy);padding:10px 20px;font-size:12px;letter-spacing:.08em}
+.nav a.cta::after{display:none}
+.nav a.cta:hover{background:var(--navy);color:#fff}
+.mb{display:none;width:42px;height:42px;border:1px solid var(--line2);background:none;cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.mb span{width:18px;height:1.5px;background:var(--navy)}
+@media(max-width:820px){.nav{display:none}.mb{display:flex}}
 
-    .privacy-section__num {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.24em;
-      color: var(--color-accent);
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
+/* eyebrow / headings */
+.ey{display:flex;align-items:center;gap:12px;font-family:var(--lat);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+.ey .n{color:var(--faint)}
+.ey::before{content:'';width:28px;height:1px;background:var(--accent)}
+.h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.4vw,40px);line-height:1.5;letter-spacing:.02em;color:var(--navy)}
+.lead{margin-top:22px;font-size:16px;color:var(--slate);font-weight:500;line-height:2.05;max-width:38em}
 
-    .privacy-section__title {
-      font-size: 17px;
-      font-weight: 500;
-      color: var(--color-primary);
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;letter-spacing:.04em;padding:16px 30px;transition:.3s var(--e);border:1px solid transparent}
+.btn.pri{background:var(--navy);color:#fff}
+.btn.pri:hover{background:var(--navy2)}
+.btn.gh{border-color:var(--line2);color:var(--navy)}
+.btn.gh:hover{border-color:var(--navy);background:var(--bg2)}
+.btn .ar{transition:transform .3s var(--e)}.btn:hover .ar{transform:translateX(5px)}
+.tlink{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;color:var(--navy);border-bottom:1px solid var(--line2);padding-bottom:5px;transition:.3s}
+.tlink:hover{border-color:var(--accent);color:var(--accent)}
+.tlink .ar{transition:transform .3s var(--e)}.tlink:hover .ar{transform:translateX(4px)}
 
-    .privacy-section__text {
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--color-text-mid);
-      line-height: 2.1;
-    }
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:.8s var(--e)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 
-    .privacy-section__text + .privacy-section__text {
-      margin-top: 16px;
-    }
+/* hero */
+.hero{padding:150px 0 90px;position:relative;border-bottom:1px solid var(--line)}
+.hero::before{content:'';position:absolute;left:40px;top:0;bottom:0;width:1px;background:var(--line);opacity:.7}
+.hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(32px,4.8vw,58px);line-height:1.42;letter-spacing:.03em;color:var(--navy)}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero__lead{margin-top:30px;font-size:16px;line-height:2.1;color:var(--slate);max-width:32em}
+.hero__act{margin-top:40px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.hero__meta{margin-top:44px;display:flex;gap:34px;border-top:1px solid var(--line);padding-top:26px}
+.hero__meta div .lat{font-size:10px;color:var(--faint);display:block;margin-bottom:6px}
+.hero__meta div b{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--navy)}
+/* hero panel: 5-stage index */
+.panel{border:1px solid var(--line2);background:var(--bg)}
+.panel__hd{background:var(--panel);color:#fff;padding:22px 26px;display:flex;align-items:center;justify-content:space-between}
+.panel__hd .lat{font-size:10px;letter-spacing:.24em;color:var(--accent-l)}
+.panel__hd b{font-family:var(--serif);font-weight:700;font-size:16px;letter-spacing:.04em}
+.panel__row{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:center;padding:17px 26px;border-top:1px solid var(--line)}
+.panel__row:first-of-type{border-top:0}
+.panel__row .no{font-family:var(--lat);font-weight:700;font-size:13px;color:var(--accent)}
+.panel__row .nm{font-weight:700;font-size:15px;color:var(--navy)}
+.panel__row .tg{font-size:12px;color:var(--faint)}
+.panel__row.base{background:var(--bg2)}
+@media(max-width:860px){.hero__in{grid-template-columns:1fr;gap:44px}.hero::before{display:none}}
 
-    .privacy-list {
-      margin-top: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+/* section */
+.sec{padding:100px 0;border-bottom:1px solid var(--line)}
+.sec__hd{max-width:760px;margin-bottom:56px}
 
-    .privacy-list__item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--color-text-mid);
-      line-height: 1.8;
-    }
+/* issues: bordered rows */
+.rows{border-top:1px solid var(--line2)}
+.row{display:grid;grid-template-columns:64px 1.1fr 2fr;gap:24px;align-items:center;padding:26px 6px;border-bottom:1px solid var(--line)}
+.row .idx{font-family:var(--lat);font-weight:700;font-size:14px;color:var(--accent)}
+.row h4{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--navy)}
+.row p{font-size:14.5px;color:var(--slate)}
+.pull{margin-top:52px;padding:40px;background:var(--navy);color:#fff;display:flex;align-items:center;gap:20px}
+.pull .bar{width:3px;height:52px;background:var(--accent-l);flex-shrink:0}
+.pull b{font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.6vw,28px);line-height:1.6}
+.pull b em{font-style:normal;color:var(--accent-l)}
+@media(max-width:720px){.row{grid-template-columns:48px 1fr;gap:14px}.row p{grid-column:1/-1;padding-left:62px}}
 
-    .privacy-list__item::before {
-      content: '';
-      width: 1px;
-      height: 14px;
-      background: var(--color-accent);
-      flex-shrink: 0;
-      margin-top: 5px;
-    }
+/* method: 3 columns */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.mcol{padding:40px 34px;border-right:1px solid var(--line);position:relative}
+.mcol:last-child{border-right:0}
+.mcol .no{font-family:var(--lat);font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.12em}
+.mcol .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.mcol .ic{width:46px;height:46px;border:1px solid var(--line2);display:grid;place-items:center}
+.mcol .ic svg{width:24px;height:24px}
+.mcol h3{font-family:var(--serif);font-weight:700;font-size:21px;color:var(--navy);margin-bottom:12px}
+.mcol p{font-size:14px;color:var(--slate);line-height:1.9}
+@media(max-width:820px){.cols3{grid-template-columns:1fr}.mcol{border-right:0;border-bottom:1px solid var(--line)}.mcol:last-child{border-bottom:0}}
 
-    .privacy-meta {
-      margin-top: 64px;
-      padding-top: 40px;
-      border-top: 1px solid var(--color-border);
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
+/* approach on gray */
+.grayband{background:var(--bg2);border-bottom:1px solid var(--line)}
+.ledger{border-top:1px solid var(--line2);margin-top:8px}
+.lrow{display:grid;grid-template-columns:1fr 1fr 2.2fr;gap:24px;align-items:center;padding:24px 6px;border-bottom:1px solid var(--line)}
+.lrow .a{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--navy)}
+.lrow .b{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.04em}
+.lrow .c{font-size:14px;color:var(--slate)}
+.lrow.on{background:var(--navy);margin:0 -6px;padding:24px 6px}
+.lrow.on .a,.lrow.on .c{color:#fff}.lrow.on .b{color:var(--accent-l)}
+.lrow.on .a small{display:block;font-family:var(--lat);font-size:10px;letter-spacing:.14em;color:var(--accent-l);margin-top:3px}
+@media(max-width:720px){.lrow{grid-template-columns:1fr;gap:6px}.lrow .c{padding-top:4px}}
 
-    .privacy-meta__item {
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--color-text-light);
-    }
+/* reasons 3col */
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.rcard{border-top:2px solid var(--navy);padding-top:24px}
+.rcard .no{font-family:var(--lat);font-weight:700;font-size:12px;color:var(--accent);letter-spacing:.12em}
+.rcard h4{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--navy);margin:10px 0 12px}
+.rcard p{font-size:14.5px;color:var(--slate);line-height:1.95}
+@media(max-width:820px){.reasons{grid-template-columns:1fr;gap:30px}}
 
-    .privacy-meta__label {
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      color: var(--color-accent);
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
+/* stats band */
+.stats{background:var(--navy);color:#fff;padding:70px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat{border-left:1px solid rgba(255,255,255,.16);padding-left:24px}
+.stat .v{font-family:var(--serif);font-weight:700;font-size:clamp(30px,3.6vw,42px);line-height:1;color:#fff}
+.stat .v small{font-size:16px;margin-left:4px;color:var(--accent-l)}
+.stat .l{margin-top:14px;font-size:13px;color:rgba(255,255,255,.7);line-height:1.7}
+@media(max-width:720px){.stats .grid{grid-template-columns:1fr 1fr;gap:34px 20px}}
 
-    .privacy-contact-block {
-      margin-top: 48px;
-      padding: 40px;
-      background: var(--color-bg);
-    }
+/* cta */
+.cta{padding:110px 0;text-align:center;position:relative}
+.cta .ey+.cta__act{margin-top:30px}
+.cta h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.6vw,40px);line-height:1.5;color:var(--navy)}
+.cta p{margin:22px auto 0;max-width:40em;color:var(--slate);font-size:15.5px;line-height:2}
+.cta__act{margin-top:38px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
-    .privacy-contact-block__label {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.24em;
-      color: var(--color-accent);
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
+/* footer */
+.ft{background:var(--navy2);color:#fff;padding:72px 0 34px}
+.ft__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+.ft .lg b{color:#fff}.ft .lg span{color:var(--accent-l)}
+.ft__mi{margin-top:16px;color:rgba(255,255,255,.62);font-size:13.5px;line-height:1.9;max-width:26em}
+.ft .cl{font-family:var(--lat);font-size:11px;letter-spacing:.18em;color:var(--accent-l);margin-bottom:18px}
+.ft a.fl{display:block;color:rgba(255,255,255,.78);font-size:13.5px;padding:6px 0;transition:.2s}
+.ft a.fl:hover{color:#fff}
+.ft__bar{padding-top:22px;display:flex;justify-content:space-between;gap:14px;color:rgba(255,255,255,.5);font-size:12px;flex-wrap:wrap}
+@media(max-width:780px){.ft__grid{grid-template-columns:1fr 1fr}}
 
-    .privacy-contact-block__text {
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--color-text-mid);
-      line-height: 2.1;
-    }
+/* mobile nav */
+.mnav{display:none;position:fixed;inset:0;z-index:99;background:#fff;flex-direction:column;padding:100px 40px 40px}
+.mnav.open{display:flex}
+.mnav a{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--navy);padding:16px 0;border-bottom:1px solid var(--line)}
+.mnav .cl{position:absolute;top:24px;right:34px;width:44px;height:44px;border:1px solid var(--line2);background:none;font-size:20px;cursor:pointer}
 
-    .privacy-contact-block__mail {
-      color: var(--color-primary);
-      font-weight: 500;
-      border-bottom: 1px solid var(--color-border);
-      padding-bottom: 1px;
-      transition: border-color 0.25s;
-    }
+/* ===== subpage additions ===== */
+.phero{padding:140px 0 62px;border-bottom:1px solid var(--line);background:var(--bg)}
+.phero h1{font-family:var(--serif);font-weight:700;font-size:clamp(30px,4.4vw,50px);line-height:1.4;letter-spacing:.03em;color:var(--navy)}
+.phero p{margin-top:20px;max-width:40em;color:var(--slate);font-size:16px;line-height:2.05}
+.note{margin-top:20px;font-size:13px;color:var(--faint)}
+/* founder */
+.fd{display:grid;grid-template-columns:300px 1fr;border:1px solid var(--line);background:var(--bg)}
+.fd__ph{background:var(--bg2)}
+.fd__ph img{width:100%;height:100%;object-fit:cover;display:block}
+.fd__tx{padding:42px}
+.fd .role{font-family:var(--lat);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.fd h3{font-family:var(--serif);font-weight:700;font-size:24px;color:var(--navy);margin:10px 0 2px}
+.fd h3 span{font-family:var(--lat);font-weight:600;font-size:12px;letter-spacing:.06em;color:var(--faint);margin-left:10px}
+.fd .bio{margin-top:16px;font-size:14.5px;color:var(--slate);line-height:2.05}
+.fd blockquote{margin-top:22px;border-left:3px solid var(--accent);padding-left:18px;font-family:var(--serif);font-weight:700;color:var(--navy);font-size:17px;line-height:1.7}
+@media(max-width:720px){.fd{grid-template-columns:1fr}.fd__ph{aspect-ratio:3/2}}
+/* info table */
+.info{border-top:1px solid var(--line2)}
+.info .r{display:grid;grid-template-columns:210px 1fr;gap:24px;padding:22px 6px;border-bottom:1px solid var(--line)}
+.info dt{font-family:var(--g);font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--accent);padding-top:3px}
+.info dd{font-size:15px;color:var(--ink)}
+.info dd a{color:var(--navy);border-bottom:1px solid var(--line2)}
+@media(max-width:560px){.info .r{grid-template-columns:1fr;gap:4px}}
+/* mission */
+.mission{border-left:3px solid var(--accent);padding-left:28px}
+.mission h3{font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.6vw,28px);line-height:1.8;color:var(--navy)}
+.mission p{margin-top:16px;font-size:15px;color:var(--slate);line-height:2.05;max-width:40em}
+/* growth full rows */
+.growth .row{grid-template-columns:64px 1.4fr 2fr}
+/* form */
+.two{display:grid;grid-template-columns:1.4fr .9fr;gap:50px;align-items:start}
+.form .fg{margin-bottom:22px}
+.form label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:9px}
+.form label .rq{color:var(--accent);font-size:11px;margin-left:8px;font-family:var(--lat)}
+.form input,.form select,.form textarea{width:100%;font-family:var(--g);font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line2);padding:14px 16px;transition:.25s}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--navy)}
+.form textarea{min-height:150px;resize:vertical}
+.sidebox{border:1px solid var(--line);padding:26px;margin-bottom:16px}
+.sidebox .t{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:16px;margin-bottom:8px}
+.sidebox p{font-size:14px;color:var(--slate);line-height:1.95}
+.sidebox a{color:var(--navy);border-bottom:1px solid var(--line2)}
+@media(max-width:820px){.two{grid-template-columns:1fr;gap:34px}}
 
-    .privacy-contact-block__mail:hover {
-      border-color: var(--color-primary);
-    }
-  </style>
+/* photos */
+.hfig{border:1px solid var(--line2);overflow:hidden;background:var(--bg2)}
+.hfig img{width:100%;height:100%;object-fit:cover;display:block}
+.mcol .ph{margin:-40px -34px 24px;border-bottom:1px solid var(--line);aspect-ratio:16/9;overflow:hidden;background:var(--bg2)}
+.mcol .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.band{border:1px solid var(--line2);overflow:hidden;aspect-ratio:24/9;background:var(--bg2)}
+.band img{width:100%;height:100%;object-fit:cover;display:block}
+.cta.photo .ey{color:var(--accent-l)}.cta.photo .ey::before{background:var(--accent-l)}.cta.photo .ey .n{color:rgba(255,255,255,.7)}
+.cta.photo h2{color:#fff}.cta.photo p{color:rgba(255,255,255,.85)}
+.cta.photo .btn.gh{border-color:rgba(255,255,255,.4);color:#fff}.cta.photo .btn.gh:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+/* line-break control (JP) */
+.h2,.hero h1,.phero h1,.cta h2,.pull b,.fd h3,.mission h3,.mcol h3,.row h4{word-break:auto-phrase;line-break:strict}
+.np{display:inline-block}
+
+/* ===== KIAI upgrade ===== */
+:root{--accent:#1E8A66;--accent-l:#39B488;--navy:#102A49;--navy2:#0A1A2E}
+.h2{font-size:clamp(28px,3.8vw,46px)}
+.hfig,.band,.mcol .ph{position:relative;background:var(--navy2)}
+.hfig img,.band img,.mcol .ph img{filter:grayscale(1) contrast(1.08) brightness(1.05);mix-blend-mode:luminosity;opacity:.9;transition:.6s var(--e)}
+.hfig::before,.band::before,.mcol .ph::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--navy2),var(--accent));mix-blend-mode:screen;opacity:.45;pointer-events:none}
+.band{box-shadow:0 40px 80px -50px rgba(10,26,46,.6)}
+.mcol .ph img{transition:.6s var(--e)}.mcol:hover .ph img{transform:scale(1.05)}
+.mcol{transition:.4s var(--e)}.mcol:hover{background:var(--bg2)}
+.cta.photo{background:radial-gradient(120% 150% at 50% 0%,#173A63,var(--navy2) 72%)!important;position:relative;overflow:hidden}
+.cta.photo::after{content:'';position:absolute;left:50%;top:14%;width:720px;height:380px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(57,180,136,.26),transparent 66%);filter:blur(34px);pointer-events:none}
+.ft{background:var(--navy2);color:#fff;border-top:0}
+.ft .ft__grid{border-bottom-color:rgba(255,255,255,.12)}
+.ft .lg b{color:#fff}.ft .lg span{color:var(--accent-l)}
+.ft .ft__mi{color:rgba(255,255,255,.62)}.ft .cl{color:var(--accent-l)}
+.ft a.fl{color:rgba(255,255,255,.78)}.ft a.fl:hover{color:#fff}
+.ft__bar{color:rgba(255,255,255,.5)}
+
+/* revert photos to natural color */
+.hfig img,.band img,.mcol .ph img{filter:none!important;mix-blend-mode:normal!important;opacity:1!important}
+.hfig::before,.band::before,.mcol .ph::before{display:none!important}
+.hfig,.band,.mcol .ph{background:var(--bg2)!important}
+
+/* green custom cursor */
+@media(hover:hover) and (pointer:fine){
+  html,body,a,button,.btn,.tlink,.mcol,.row,.hd,.panel__row{cursor:none}
+  .curdot{position:fixed;top:0;left:0;width:7px;height:7px;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);z-index:99999;pointer-events:none}
+  .curring{position:fixed;top:0;left:0;width:32px;height:32px;border:1.5px solid var(--accent);border-radius:50%;transform:translate(-50%,-50%);z-index:99999;pointer-events:none;transition:width .25s var(--e),height .25s var(--e),background .25s,opacity .3s;opacity:.9}
+  .curring.h{width:54px;height:54px;background:rgba(30,138,102,.12)}
+}
+@media(hover:none),(pointer:coarse){.curdot,.curring{display:none}}
+
+
+/* ===== privacy page ===== */
+.pv{max-width:840px}
+.pv__intro{font-size:15px;color:var(--slate);line-height:2.05;padding-bottom:40px}
+.art{padding:38px 0;border-bottom:1px solid var(--line)}
+.art:first-of-type{border-top:1px solid var(--line2)}
+.art .no{font-family:var(--lat);font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.art h2{font-family:var(--serif);font-weight:700;font-size:clamp(18px,2.2vw,22px);line-height:1.65;color:var(--navy);margin:9px 0 16px;word-break:auto-phrase;line-break:strict}
+.art p{font-size:14.5px;color:var(--slate);line-height:2.05}
+.art p+p{margin-top:14px}
+.plist{margin-top:18px;display:flex;flex-direction:column;gap:11px;list-style:none}
+.plist li{display:flex;gap:15px;font-size:14.5px;color:var(--slate);line-height:1.9}
+.plist li::before{content:'';width:14px;height:1px;background:var(--accent);flex-shrink:0;margin-top:14px}
+.pbox{margin-top:48px;border:1px solid var(--line2);background:var(--bg2);padding:36px}
+.pbox .cl{font-family:var(--lat);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.pbox p{font-size:14.5px;color:var(--slate);line-height:2.05}
+.pbox a{color:var(--navy);border-bottom:1px solid var(--line2);transition:.25s}
+.pbox a:hover{border-color:var(--accent);color:var(--accent)}
+.pmeta{margin-top:40px;padding-top:28px;border-top:1px solid var(--line);display:flex;gap:48px;flex-wrap:wrap}
+.pmeta .lb{font-family:var(--lat);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.pmeta .vl{font-size:13.5px;color:var(--slate)}
+@media(max-width:560px){.pbox{padding:26px}.pmeta{gap:28px}}
+
+</style>
 </head>
 <body>
+<header class="hd" id="hd">
+  <div class="hd__in">
+    <a href="index.html" class="lg"><b>TORIDEA</b><span>株式会社トリデア</span></a>
+    <nav class="nav">
+      <a href="index.html">TOP</a><a href="service.html">サービス</a><a href="about.html">会社情報</a>
+      <a href="contact.html" class="cta">お問い合わせ</a>
+    </nav>
+    <button class="mb" id="mb" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mnav" id="mn"><button class="cl" id="mncl">✕</button>
+  <a href="index.html">TOP</a><a href="service.html">サービス</a><a href="about.html">会社情報</a><a href="contact.html">お問い合わせ</a>
+</div>
+<section class="phero">
+  <div class="wrap">
+    <div class="ey rv in">Legal <span class="n">／ プライバシーポリシー</span></div>
+    <h1 class="rv in d1">プライバシーポリシー</h1>
+    <p class="rv in d2">株式会社トリデアは、お客様の個人情報の保護を重要な責務と認識し、適切な取り扱いに努めます。</p>
+  </div>
+</section>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header__inner">
-      <a href="index.html" class="header__logo">
-        <span class="header__logo-name">株式会社トリデア</span>
-        <span class="header__logo-en">TORIDEA Inc.</span>
-      </a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">TOP</a></li>
-          <li><a href="about.html" class="nav__link">会社概要</a></li>
-          <li><a href="service.html" class="nav__link">事業内容</a></li>
+<section class="sec">
+  <div class="wrap">
+    <div class="pv">
+      <p class="pv__intro rv">株式会社トリデア（以下「当社」）は、本ウェブサイトをご利用いただく皆様（以下「ユーザー」）の個人情報の保護を最重要事項のひとつと認識し、以下のプライバシーポリシーに従って個人情報を適切に取り扱います。</p>
+
+      <div class="art rv">
+        <div class="no">Article 01</div>
+        <h2>個人情報の取得について</h2>
+        <p>当社は、サービスのご提供・ご連絡・採用活動等に必要な範囲で、以下の方法により個人情報を取得します。</p>
+        <ul class="plist">
+          <li>お問い合わせフォームへの入力</li>
+          <li>メール・電話等による直接のご連絡</li>
+          <li>名刺・書面等のご提出</li>
+          <li>本ウェブサイトへのアクセスに伴う自動取得（Cookieなど）</li>
         </ul>
-      </nav>
-      <a href="contact.html" class="nav__cta">お問い合わせ</a>
-      <button class="hamburger" id="hamburger" aria-label="メニュー">
-        <span class="hamburger__bar"></span>
-        <span class="hamburger__bar"></span>
-        <span class="hamburger__bar"></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <ul class="mobile-nav__list">
-      <li><a href="index.html" class="mobile-nav__link">TOP</a></li>
-      <li><a href="about.html" class="mobile-nav__link">会社概要</a></li>
-      <li><a href="service.html" class="mobile-nav__link">事業内容</a></li>
-    </ul>
-    <a href="contact.html" class="mobile-nav__cta">お問い合わせ</a>
-  </div>
-
-  <!-- Page Hero -->
-  <div class="main-content">
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-hero__eyebrow">
-          <span class="page-hero__label">Legal</span>
-          <span class="page-hero__line"></span>
-        </div>
-        <h1 class="page-hero__title">プライバシーポリシー</h1>
-        <p class="page-hero__lead">
-          株式会社トリデアは、お客様の個人情報の保護を重要な責務と認識し、<br>
-          適切な取り扱いに努めます。
-        </p>
       </div>
-    </section>
 
-    <!-- Policy Content -->
-    <section class="section">
-      <div class="container">
-        <div class="privacy-body fade-in">
-
-          <p class="privacy-section__text" style="margin-bottom:48px;">
-            株式会社トリデア（以下「当社」）は、本ウェブサイトをご利用いただく皆様（以下「ユーザー」）の個人情報の保護を最重要事項のひとつと認識し、以下のプライバシーポリシーに従って個人情報を適切に取り扱います。
-          </p>
-
-          <!-- 1 -->
-          <div class="privacy-section">
-            <p class="privacy-section__num">Article 01</p>
-            <h2 class="privacy-section__title">個人情報の取得について</h2>
-            <p class="privacy-section__text">
-              当社は、サービスのご提供・ご連絡・採用活動等に必要な範囲で、以下の方法により個人情報を取得します。
-            </p>
-            <div class="privacy-list">
-              <p class="privacy-list__item">お問い合わせフォームへの入力</p>
-              <p class="privacy-list__item">メール・電話等による直接のご連絡</p>
-              <p class="privacy-list__item">名刺・書面等のご提出</p>
-              <p class="privacy-list__item">本ウェブサイトへのアクセスに伴う自動取得（Cookieなど）</p>
-            </div>
-          </div>
-
-          <!-- 2 -->
-          <div class="privacy-section">
-            <p class="privacy-section__num">Article 02</p>
-            <h2 class="privacy-section__title">個人情報の利用目的</h2>
-            <p class="privacy-section__text">
-              取得した個人情報は、以下の目的のために利用します。
-            </p>
-            <div class="privacy-list">
-              <p class="privacy-list__item">お問い合わせ・ご相談への対応</p>
-              <p class="privacy-list__item">サービスのご提供および契約の履行</p>
-              <p class="privacy-list__item">採用選考のご連絡・情報提供</p>
-              <p class="privacy-list__item">サービスの改善・新サービスの開発</p>
-              <p class="privacy-list__item">当社からのご案内・情報発信（ご同意いただいた場合）</p>
-              <p class="privacy-list__item">法令に基づく対応</p>
-            </div>
-            <p class="privacy-section__text" style="margin-top:16px;">
-              上記以外の目的で個人情報を利用する場合は、あらかじめご本人の同意を得た上で行います。
-            </p>
-          </div>
-
-          <!-- 3 -->
-          <div class="privacy-section">
-            <p class="privacy-section__num">Article 03</p>
-            <h2 class="privacy-section__title">個人情報の第三者提供</h2>
-            <p class="privacy-section__text">
-              当社は、以下のいずれかに該当する場合を除き、ご本人の同意なく個人情報を第三者に提供しません。
-            </p>
-            <div class="privacy-list">
-              <p class="privacy-list__item">法令に基づき開示が求められる場合</p>
-              <p class="privacy-list__item">人の生命・身体・財産の保護のために必要であり、本人の同意を得ることが困難な場合</p>
-              <p class="privacy-list__item">業務委託に伴い、委託先へ必要最小限の情報を提供する場合（委託先は当社と同等の個人情報保護措置を講じます）</p>
-              <p class="privacy-list__item">その他、法令で認められる場合</p>
-            </div>
-          </div>
-
-          <!-- 4 -->
-          <div class="privacy-section">
-            <p class="privacy-section__num">Article 04</p>
-            <h2 class="privacy-section__title">個人情報の開示・訂正・削除</h2>
-            <p class="privacy-section__text">
-              ご本人から個人情報の開示・訂正・削除・利用停止のご請求があった場合、ご本人であることを確認の上、合理的な期間内に対応します。ただし、法令上の義務がある場合や業務上の支障がある場合はこの限りではありません。
-            </p>
-            <p class="privacy-section__text">
-              ご請求は、下記のお問い合わせ窓口までご連絡ください。
-            </p>
-          </div>
-
-          <!-- 5 -->
-          <div class="privacy-section">
-            <p class="privacy-section__num">Article 05</p>
-            <h2 class="privacy-section__title">セキュリティ対策</h2>
-            <p class="privacy-section__text">
-              当社は、個人情報の漏洩・滅失・毀損等を防止するため、適切な安全管理措置を実施します。個人情報へのアクセスは、業務上必要な担当者に限定し、適切な管理のもとで取り扱います。
-            </p>
-            <p class="privacy-section__text">
-              なお、本ウェブサイトのお問い合わせフォームは SSL/TLS 暗号化通信を使用し、送受信データの保護に努めています。
-            </p>
-          </div>
-
-          <!-- 6 -->
-          <div class="privacy-section">
-            <p class="privacy-section__num">Article 06</p>
-            <h2 class="privacy-section__title">Cookieの使用について</h2>
-            <p class="privacy-section__text">
-              本ウェブサイトでは、ユーザー体験の向上およびアクセス解析を目的として Cookie を使用する場合があります。Cookie は、ブラウザの設定により無効化することができますが、その場合、本ウェブサイトの一部機能がご利用いただけなくなる場合があります。
-            </p>
-            <p class="privacy-section__text">
-              Cookie によって収集される情報は、個人を特定するものではありません。アクセス解析に取得したデータは、サービス改善の目的にのみ使用します。
-            </p>
-          </div>
-
-          <!-- 7 -->
-          <div class="privacy-section">
-            <p class="privacy-section__num">Article 07</p>
-            <h2 class="privacy-section__title">プライバシーポリシーの変更</h2>
-            <p class="privacy-section__text">
-              当社は、法令の変更や業務内容の変化等に応じて、本ポリシーを予告なく改定することがあります。重要な変更がある場合は、本ウェブサイト上でお知らせします。改定後のポリシーは、本ページに掲載した時点より効力を生じるものとします。
-            </p>
-          </div>
-
-          <!-- Contact -->
-          <div class="privacy-contact-block fade-in">
-            <p class="privacy-contact-block__label">お問い合わせ窓口</p>
-            <p class="privacy-contact-block__text">
-              個人情報の取り扱いに関するご質問・ご請求は、下記窓口までお問い合わせください。<br><br>
-              株式会社トリデア　個人情報取扱担当<br>
-              〒157-0072　東京都世田谷区祖師谷5-32-30<br>
-              E-mail：<a href="mailto:info@toridea.co.jp" class="privacy-contact-block__mail">info@toridea.co.jp</a>
-            </p>
-          </div>
-
-          <!-- Meta -->
-          <div class="privacy-meta fade-in">
-            <div class="privacy-meta__item">
-              <p class="privacy-meta__label">Established</p>
-              <p>2026年4月3日 制定</p>
-            </div>
-            <div class="privacy-meta__item">
-              <p class="privacy-meta__label">Company</p>
-              <p>株式会社トリデア</p>
-            </div>
-          </div>
-
-        </div>
+      <div class="art rv">
+        <div class="no">Article 02</div>
+        <h2>個人情報の利用目的</h2>
+        <p>取得した個人情報は、以下の目的のために利用します。</p>
+        <ul class="plist">
+          <li>お問い合わせ・ご相談への対応</li>
+          <li>サービスのご提供および契約の履行</li>
+          <li>採用選考のご連絡・情報提供</li>
+          <li>サービスの改善・新サービスの開発</li>
+          <li>当社からのご案内・情報発信（ご同意いただいた場合）</li>
+          <li>法令に基づく対応</li>
+        </ul>
+        <p style="margin-top:16px">上記以外の目的で個人情報を利用する場合は、あらかじめご本人の同意を得た上で行います。</p>
       </div>
-    </section>
-  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <p class="footer__brand-name">株式会社トリデア</p>
-          <p class="footer__brand-en">TORIDEA Inc.</p>
-          <p class="footer__mission">
-            「思いやり」で幸せが広がる社会をつくる。
-          </p>
-        </div>
-        <div>
-          <p class="footer__col-label">Navigation</p>
-          <ul class="footer__nav-list">
-            <li><a href="index.html" class="footer__nav-link">TOP</a></li>
-            <li><a href="about.html" class="footer__nav-link">会社概要</a></li>
-            <li><a href="service.html" class="footer__nav-link">事業内容</a></li>
-            <li><a href="contact.html" class="footer__nav-link">お問い合わせ</a></li>
-            <li><a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__col-label">Contact</p>
-          <p class="footer__address">
-            〒157-0072<br>
-            東京都世田谷区祖師谷5-32-30<br><br>
-            <a href="mailto:info@toridea.co.jp" style="color:var(--color-accent);">info@toridea.co.jp</a>
-          </p>
-        </div>
+      <div class="art rv">
+        <div class="no">Article 03</div>
+        <h2>個人情報の第三者提供</h2>
+        <p>当社は、以下のいずれかに該当する場合を除き、ご本人の同意なく個人情報を第三者に提供しません。</p>
+        <ul class="plist">
+          <li>法令に基づき開示が求められる場合</li>
+          <li>人の生命・身体・財産の保護のために必要であり、本人の同意を得ることが困難な場合</li>
+          <li>業務委託に伴い、委託先へ必要最小限の情報を提供する場合（委託先は当社と同等の個人情報保護措置を講じます）</li>
+          <li>その他、法令で認められる場合</li>
+        </ul>
       </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2026 株式会社トリデア. All Rights Reserved.</p>
-        <p class="footer__tagline">Toridea組織インフラ</p>
+
+      <div class="art rv">
+        <div class="no">Article 04</div>
+        <h2>個人情報の開示・訂正・削除</h2>
+        <p>ご本人から個人情報の開示・訂正・削除・利用停止のご請求があった場合、ご本人であることを確認の上、合理的な期間内に対応します。ただし、法令上の義務がある場合や業務上の支障がある場合はこの限りではありません。</p>
+        <p>ご請求は、下記のお問い合わせ窓口までご連絡ください。</p>
+      </div>
+
+      <div class="art rv">
+        <div class="no">Article 05</div>
+        <h2>セキュリティ対策</h2>
+        <p>当社は、個人情報の漏洩・滅失・毀損等を防止するため、適切な安全管理措置を実施します。個人情報へのアクセスは、業務上必要な担当者に限定し、適切な管理のもとで取り扱います。</p>
+        <p>なお、本ウェブサイトのお問い合わせフォームは SSL/TLS 暗号化通信を使用し、送受信データの保護に努めています。</p>
+      </div>
+
+      <div class="art rv">
+        <div class="no">Article 06</div>
+        <h2>Cookieの使用について</h2>
+        <p>本ウェブサイトでは、ユーザー体験の向上およびアクセス解析を目的として Cookie を使用する場合があります。Cookie は、ブラウザの設定により無効化することができますが、その場合、本ウェブサイトの一部機能がご利用いただけなくなる場合があります。</p>
+        <p>Cookie によって収集される情報は、個人を特定するものではありません。アクセス解析に取得したデータは、サービス改善の目的にのみ使用します。</p>
+      </div>
+
+      <div class="art rv">
+        <div class="no">Article 07</div>
+        <h2>プライバシーポリシーの変更</h2>
+        <p>当社は、法令の変更や業務内容の変化等に応じて、本ポリシーを予告なく改定することがあります。重要な変更がある場合は、本ウェブサイト上でお知らせします。改定後のポリシーは、本ページに掲載した時点より効力を生じるものとします。</p>
+      </div>
+
+      <div class="pbox rv">
+        <div class="cl">お問い合わせ窓口</div>
+        <p>個人情報の取り扱いに関するご質問・ご請求は、下記窓口までお問い合わせください。</p>
+        <p style="margin-top:16px">株式会社トリデア　個人情報取扱担当<br>〒135-0064　東京都江東区青海2-7-4 the SOHO 821<br>E-mail：<a href="mailto:info@toridea.co.jp">info@toridea.co.jp</a></p>
+      </div>
+
+      <div class="pmeta rv">
+        <div><div class="lb">Established</div><div class="vl">2026年4月3日 制定</div></div>
+        <div><div class="lb">Company</div><div class="vl">株式会社トリデア</div></div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('is-open');
-      mobileNav.classList.toggle('is-open');
-    });
-
-    document.querySelectorAll('.mobile-nav__link, .mobile-nav__cta').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('is-open');
-        mobileNav.classList.remove('is-open');
-      });
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+<footer class="ft"><div class="wrap">
+    <div class="ft__grid">
+      <div>
+        <div class="lg"><b>TORIDEA</b><span>株式会社トリデア</span></div>
+        <p class="ft__mi">「思いやり」で幸せが広がる社会をつくる。組織開発パートナーとして、自走する組織づくりに伴走します。</p>
+      </div>
+      <div><div class="cl">Sitemap</div><a class="fl" href="index.html">TOP</a><a class="fl" href="service.html">サービス</a><a class="fl" href="about.html">会社情報</a><a class="fl" href="contact.html">お問い合わせ</a><a class="fl" href="privacy.html">プライバシーポリシー</a></div>
+      <div><div class="cl">Company</div><p class="ft__mi" style="margin-top:0">株式会社トリデア<br>設立 2026年4月<br>〒135-0064 東京都江東区青海2-7-4 the SOHO 821<br><a href="mailto:info@toridea.co.jp" style="color:var(--accent-l)">info@toridea.co.jp</a></p></div>
+    </div>
+    <div class="ft__bar"><span>© 2026 TORIDEA Inc.</span><span>受け継いだ誇りを、次の使命に変える。</span></div>
+  </div>
+</footer>
+<script>
+(function(){
+  var hd=document.getElementById('hd');
+  addEventListener('scroll',function(){hd.classList.toggle('small',scrollY>20)},{passive:true});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.16,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv:not(.in)').forEach(function(el){io.observe(el)});
+  var mb=document.getElementById('mb'),mn=document.getElementById('mn'),cl=document.getElementById('mncl');
+  if(mb){mb.onclick=function(){mn.classList.add('open')};cl.onclick=function(){mn.classList.remove('open')};
+    mn.querySelectorAll('a').forEach(function(a){a.onclick=function(){mn.classList.remove('open')}});}
+})();
+</script>
+<div class="curdot"></div><div class="curring"></div>
+<script>(function(){
+  if(matchMedia('(hover:none),(pointer:coarse)').matches)return;
+  var dot=document.querySelector('.curdot'),ring=document.querySelector('.curring');
+  if(!dot||!ring)return;
+  var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;
+  addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;dot.style.left=tx+'px';dot.style.top=ty+'px';},{passive:true});
+  (function loop(){rx+=(tx-rx)*.2;ry+=(ty-ry)*.2;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+  document.querySelectorAll('a,button,.btn,.tlink,.mcol,.row').forEach(function(el){
+    el.addEventListener('mouseenter',function(){ring.classList.add('h')});
+    el.addEventListener('mouseleave',function(){ring.classList.remove('h')});
+  });
+  document.addEventListener('mouseleave',function(){dot.style.opacity=0;ring.style.opacity=0});
+  document.addEventListener('mouseenter',function(){dot.style.opacity=1;ring.style.opacity=.9});
+})();</script>
 </body>
 </html>
